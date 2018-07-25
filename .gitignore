@@ -6,6 +6,6 @@ Thumbs.db
 .vs/
 
 # Project stuff
-warpdrive/assets/
 warpdrive/bin/
 warpdrive/build/
+warpdrive/logs/

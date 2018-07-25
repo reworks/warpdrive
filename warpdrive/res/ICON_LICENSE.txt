@@ -1,0 +1,5 @@
+icon1.ico
+	Author: krislachowski
+	License: CC-BY 3.0
+	Modifications: File renamed and exported to icon1.ico from SpaaaaaaaceFinFlatWithRing.jpg also shrunk and added text overlay when used as icon.
+	Link: https://opengameart.org/content/spaaaaaaace-scene

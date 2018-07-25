@@ -22,7 +22,16 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="res\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\warpdrive.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\warpdrive.aps" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
