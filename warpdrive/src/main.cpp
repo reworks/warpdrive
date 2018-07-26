@@ -8,10 +8,15 @@
 ///
 
 #include <sl/events/Keys.hpp>
+#include <sl/tags/CameraTag.hpp>
 #include <sl/core/Application.hpp>
 #include <sl/systems/RenderSystem.hpp>
 #include <sl/systems/CameraSystem.hpp>
 #include <allegro5/allegro_native_dialog.h>
+
+#include "states/Menu.hpp"
+#include "states/Load.hpp"
+#include "states/Game.hpp"
 
 ///
 /// The main class for creating a starlight application.
@@ -24,14 +29,21 @@ public:
 	///
 	inline warpdrive(const std::string& config, std::function<void(std::ofstream&)> newConfig) : sl::Application(config, newConfig)
 	{
+		// Register game systems.
 		m_world->registerSystem<sl::RenderSystem>(m_configReader->lookup<int>(config, "graphics", "quadTreeLevels"), m_configReader->lookup<int>(config, "graphics", "quadTreeMaxEntities"));
 		m_world->registerSystem<sl::CameraSystem>();
 
-		sl::Keys::KEY_FORWARD = m_configReader->lookup<unsigned int>(config, "keys", "forward");
-		sl::Keys::KEY_BACKWARD = m_configReader->lookup<unsigned int>(config, "keys", "backward");
-		sl::Keys::KEY_LEFT = m_configReader->lookup<unsigned int>(config, "keys", "left");
-		sl::Keys::KEY_RIGHT = m_configReader->lookup<unsigned int>(config, "keys", "right");
-		sl::Keys::KEY_QUIT = m_configReader->lookup<unsigned int>(config, "keys", "quit");
+		// Set up game states.
+		m_stateMachine->createState<Menu>("menu");
+		m_stateMachine->createState<Load>("load");
+		m_stateMachine->createState<Game>("game");
+		m_stateMachine->push("menu");
+		m_stateMachine->push("load");
+		m_stateMachine->push("game");
+
+		// And the camera.
+		entt::DefaultRegistry::entity_type cameraEntity = m_world->m_registry.create();
+		m_world->m_registry.assign<sl::CameraTag>(entt::tag_t{}, cameraEntity, sl::Rect<float, int>{ 0, 0, 1280, 720 });
 	}
 
 	///
@@ -63,7 +75,7 @@ int main(int argc, char **argv)
 					newConfig << "msaa = true\n";
 					newConfig << "msaaValue = 2\n";
 					newConfig << "title = warpdrive\n";
-					newConfig << "icon = icon.png\n";
+					newConfig << "icon = textures/icon.png\n";
 					newConfig << "atlasPowerOf = 11\n";
 					newConfig << "quadTreeLevels = 20\n";
 					newConfig << "quadTreeMaxEntities = 100\n";

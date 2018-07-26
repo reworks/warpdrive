@@ -20,18 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\states\Game.cpp" />
+    <ClCompile Include="src\states\Load.cpp" />
+    <ClCompile Include="src\states\Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="src\states\Game.hpp" />
+    <ClInclude Include="src\states\Load.hpp" />
+    <ClInclude Include="src\states\Menu.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="res\warpdrive.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\warpdrive.aps" />
+    <Text Include="TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
