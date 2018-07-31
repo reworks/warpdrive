@@ -34,11 +34,11 @@ public:
 		m_world->registerSystem<sl::CameraSystem>();
 
 		// Set up game states.
-		m_stateMachine->createState<Menu>("menu");
 		m_stateMachine->createState<Load>("load");
+		m_stateMachine->createState<Menu>("menu");
 		m_stateMachine->createState<Game>("game");
-		m_stateMachine->push("menu");
 		m_stateMachine->push("load");
+		m_stateMachine->push("menu");
 		m_stateMachine->push("game");
 
 		// And the camera.

@@ -29,6 +29,15 @@ Load::~Load()
 {
 }
 
+void Load::load()
+{
+	sl::Locator::world->createEntity("")
+}
+
+void Load::unload()
+{
+}
+
 void Load::event(ALLEGRO_EVENT* event)
 {
 	switch (event->type)

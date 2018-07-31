@@ -29,6 +29,14 @@ Menu::~Menu()
 {
 }
 
+void Menu::load()
+{
+}
+
+void Menu::unload()
+{
+}
+
 void Menu::event(ALLEGRO_EVENT* event)
 {
 	switch (event->type)

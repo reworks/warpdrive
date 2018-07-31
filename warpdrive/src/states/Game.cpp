@@ -29,6 +29,14 @@ Game::~Game()
 {
 }
 
+void Game::load()
+{
+}
+
+void Game::unload()
+{
+}
+
 void Game::event(ALLEGRO_EVENT* event)
 {
 	switch (event->type)

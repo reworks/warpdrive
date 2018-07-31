@@ -9,3 +9,5 @@ Thumbs.db
 warpdrive/bin/
 warpdrive/build/
 warpdrive/logs/
+warpdrive/*.log
+warpdrive/*.ini

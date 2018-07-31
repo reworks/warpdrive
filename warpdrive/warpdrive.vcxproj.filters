@@ -21,10 +21,10 @@
     <ClCompile Include="src\states\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\states\Load.cpp">
+    <ClCompile Include="src\states\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\states\Menu.cpp">
+    <ClCompile Include="src\states\Load.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +32,10 @@
     <ClInclude Include="src\states\Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\states\Load.hpp">
+    <ClInclude Include="src\states\Menu.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\states\Menu.hpp">
+    <ClInclude Include="src\states\Load.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

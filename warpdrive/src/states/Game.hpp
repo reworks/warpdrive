@@ -18,6 +18,9 @@ public:
 	Game();
 	~Game() override;
 
+	void load() override;
+	void unload() override;
+
 	void event(ALLEGRO_EVENT* event) override;
 	void update(double dt) override;
 	void render() override;
