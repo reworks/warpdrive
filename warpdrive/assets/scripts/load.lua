@@ -3,19 +3,18 @@ entity =
 	RenderComponent =
 	{
 		opacity = 1.0,
-		textureName = "menubg"
+		textureName = "loading"
 	},
 	TransformComponent = 
 	{
-		layer = 1,
+		layer = 2,
 		x = 0,
 		y = 0,
 		width = 1280,
 		height = 720,
 		angle = 0.0
 	},
-	ScrollingBackgroundComponent =
+	EnabledComponent =
 	{
-		speed = 1.0
 	}
 }

@@ -31,7 +31,8 @@ Load::~Load()
 
 void Load::load()
 {
-	sl::Locator::world->createEntity("")
+	sl::Locator::world->createEntity("load.lua");
+	sl::Locator::world->createEntity("menu.lua");
 }
 
 void Load::unload()

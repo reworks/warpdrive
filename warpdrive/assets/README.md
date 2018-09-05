@@ -10,6 +10,15 @@ Attribution and credits for used resources.
 
 	Link: https://opengameart.org/content/spaaaaaaace-scene
 
+**textures/menu_bg.png:**
+
+	Author: Rawdanitsu
+	License: Public Domain CC0
+
+	Modifications: File resized and content cut to fit new dimensions. File extension change.
+
+	Link: https://opengameart.org/content/space-backgrounds-1
+
 **fonts/vcr_osd.ttf:**
 
 	Author: Riciery Leal

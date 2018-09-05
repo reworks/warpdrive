@@ -12,6 +12,9 @@
 #include <sl/core/Application.hpp>
 #include <sl/systems/RenderSystem.hpp>
 #include <sl/systems/CameraSystem.hpp>
+#include <sl/systems/ScrollingBackgroundSystem.hpp>
+#include <sl/systems/AnimationSystem.hpp>
+#include <sl/systems/PhysicsSystem.hpp>
 #include <allegro5/allegro_native_dialog.h>
 
 #include "states/Menu.hpp"
@@ -32,14 +35,17 @@ public:
 		// Register game systems.
 		m_world->registerSystem<sl::RenderSystem>(m_configReader->lookup<int>(config, "graphics", "quadTreeLevels"), m_configReader->lookup<int>(config, "graphics", "quadTreeMaxEntities"));
 		m_world->registerSystem<sl::CameraSystem>();
+		m_world->registerSystem<sl::PhysicsSystem>("", m_configReader->lookup<float>(config, "box2d", "ups"), m_configReader->lookup<int>(config, "box2d", "velocityIterations"), m_configReader->lookup<int>(config, "box2d", "positionIterations"));
+		m_world->registerSystem<sl::AnimationSystem>();
+		m_world->registerSystem<sl::ScrollingBackgroundSystem>();
 
 		// Set up game states.
 		m_stateMachine->createState<Load>("load");
 		m_stateMachine->createState<Menu>("menu");
 		m_stateMachine->createState<Game>("game");
 		m_stateMachine->push("load");
-		m_stateMachine->push("menu");
-		m_stateMachine->push("game");
+		//m_stateMachine->push("menu");
+		//m_stateMachine->push("game");
 
 		// And the camera.
 		entt::DefaultRegistry::entity_type cameraEntity = m_world->m_registry.create();
