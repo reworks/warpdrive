@@ -98,6 +98,8 @@ int main(int argc, char **argv)
 
 					newConfig << "[font]\n";
 					newConfig << "fontScript = scripts/fonts.lua\n";
+					newConfig << "defaultFont = fonts/vcr_osd.ttf\n";
+					newConfig << "defaultFontSize = 16\n";
 					newConfig << std::endl;
 
 					newConfig << "[audio]\n";
