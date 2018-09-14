@@ -44,8 +44,6 @@ public:
 		m_stateMachine->createState<Menu>("menu");
 		m_stateMachine->createState<Game>("game");
 		m_stateMachine->push("load");
-		//m_stateMachine->push("menu");
-		//m_stateMachine->push("game");
 
 		// And the camera.
 		entt::DefaultRegistry::entity_type cameraEntity = m_world->m_registry.create();
@@ -98,8 +96,6 @@ int main(int argc, char **argv)
 
 					newConfig << "[font]\n";
 					newConfig << "fontScript = scripts/fonts.lua\n";
-					newConfig << "defaultFont = fonts/vcr_osd.ttf\n";
-					newConfig << "defaultFontSize = 16\n";
 					newConfig << std::endl;
 
 					newConfig << "[audio]\n";

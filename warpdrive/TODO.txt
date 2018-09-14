@@ -1,1 +1,6 @@
-need to figure out whats wrong with texture atlas
+warpdrive: sent to explore galaxy, random encounters in galaxy, map nodes, etc...
+own ui...?
+battle mode, exploration mode, etc. simple game.
+end goal map entire sector. fight boss.
+yay?
+add some cool spooky space shite
