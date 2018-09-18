@@ -106,15 +106,6 @@ int main(int argc, char **argv)
 					newConfig << "nullSound = null\n";
 					newConfig << std::endl;
 
-					newConfig << "# see allegro key codes\n";
-					newConfig << "[keys]\n";
-					newConfig << "forward = 23\n";
-					newConfig << "backward = 19\n";
-					newConfig << "left = 1\n";
-					newConfig << "right = 4\n";
-					newConfig << "quit = 59\n";
-					newConfig << std::endl;
-
 					newConfig << "[debug]\n";
 					newConfig << "isDisabled = false\n";
 					newConfig << std::endl;
